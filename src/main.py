@@ -99,10 +99,12 @@ def generate_page(from_path, template_path, dest_path, basepath):
 
 
 def main():
+    # clean
     init_static("./static", "./docs")
     basepath = "/"
     if len(sys.argv) > 1:
         basepath = sys.argv[1]
+    # generate
     generate_pages_recursive("./content", "./template.html", "./docs", basepath)
 
 
